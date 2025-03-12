@@ -100,13 +100,25 @@ const HomePage = () => {
   const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 });
 
   useEffect(() => {
-    if (constraintsRef.current) {
-      setDragConstraints({
-        left: -constraintsRef.current.scrollWidth + constraintsRef.current.clientWidth,
-        right: 0
-      });
-    }
-  }, []);
+    // Function to update constraints
+    const updateConstraints = () => {
+      if (constraintsRef.current) {
+        setDragConstraints({
+          left: -constraintsRef.current.scrollWidth + constraintsRef.current.clientWidth,
+          right: 0
+        });
+      }
+    };
+
+    // Initial update
+    updateConstraints();
+
+    // Add resize event listener
+    window.addEventListener('resize', updateConstraints);
+
+    // Cleanup function to remove event listener
+    return () => window.removeEventListener('resize', updateConstraints);
+  }, []); 
 
   return (
 
@@ -186,7 +198,7 @@ const HomePage = () => {
     transition={{ duration: 1 }}
   >
     {/* Salad Image */}
-    <Image
+    <img
       src="/images/hero-salad.png"
       alt="Green Salad Tomato"
       width={500}
@@ -196,7 +208,7 @@ const HomePage = () => {
 
     {/* Floating Card (More to the Right on Mobile) */}
     <div className="absolute bottom-4 right-2 md:left-8 md:right-auto transform opacity-80 bg-white shadow-lg rounded-xl p-4 flex items-center gap-3 w-56 md:w-60">
-      <Image
+      <img
         src="/images/salad-thumbnail.png"
         alt="Salad Thumbnail"
         width={40}
@@ -255,7 +267,7 @@ const HomePage = () => {
         dragConstraints={dragConstraints}
         dragElastic={0}
         dragMomentum={true}  
-        dragTransition={{ bounceStiffness: 100, bounceDamping: 10, power: 2 }}
+        dragTransition={{ bounceStiffness: 600, bounceDamping: 10, power: 0.5 }}
       >
         {categories.map((cat, index) => (
           <motion.div
@@ -272,7 +284,7 @@ const HomePage = () => {
           >
             {/* Rest of your category card content remains the same */}
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-2">
-              <Image
+              <img
                 src={cat.icon}
                 alt={cat.name}
                 width={40}
@@ -330,10 +342,10 @@ const HomePage = () => {
           >
             {/* Item Icon */}
             <div className="w-24 h-24 relative">
-              <Image
+              <img
                 src={item.icon}
                 alt={item.name}
-                fill
+      
                 className="object-contain"
               />
             </div>
@@ -367,7 +379,7 @@ const HomePage = () => {
       {/* Social Icons */}
       <div className="flex gap-3 mt-4">
         <button className="bg-[#8BAC3E] p-4 rounded-full text-white cursor-pointer">
-        <Image
+        <img
             src="/icons/mail.png"
             alt="email"
             width={24}
@@ -376,7 +388,7 @@ const HomePage = () => {
           /> 
         </button>
         <button className="bg-[#F9FFF6] p-4 rounded-full border border-gray-50 cursor-pointer">
-        <Image
+        <img
             src="/icons/phone.png"
             alt="phone"
             width={24}
@@ -385,7 +397,7 @@ const HomePage = () => {
           /> 
         </button>
         <button className="bg-[#F9FFF6] p-4 rounded-full border border-gray-50 cursor-pointer">
-        <Image
+        <img
             src="/icons/instagram.png"
             alt="phone"
             width={24}
@@ -435,7 +447,7 @@ const HomePage = () => {
         </button>
       </div>
       <div className="flex gap-2 mt-4 items-center">
-      <Image
+      <img
             src="/icons/mail-2.png"
             alt="email"
             width={20}
@@ -445,7 +457,7 @@ const HomePage = () => {
         <p className="text-sm">elemesid@gmail.com</p>
       </div>
       <div className="flex gap-2 mt-2 items-center">
-      <Image
+      <img
             src="/icons/phone.png"
             alt="phone"
             width={20}

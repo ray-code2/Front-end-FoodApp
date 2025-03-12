@@ -382,27 +382,21 @@ const HomePage = () => {
         <img
             src="/icons/mail.png"
             alt="email"
-            width={32}
-            height={32}
-            className="object-contain"
+            className="rounded-full max-w-[30px] max-h-[24px] object-cover"
           /> 
         </button>
         <button className="bg-[#F9FFF6] p-4 rounded-full border border-gray-50 cursor-pointer">
         <img
             src="/icons/Phone.png"
             alt="phone"
-            width={32}
-            height={32}
-            className="object-contain"
+            className="max-w-[30px] max-h-[24px] object-contain"
           /> 
         </button>
         <button className="bg-[#F9FFF6] p-4 rounded-full border border-gray-50 cursor-pointer">
         <img
             src="/icons/instagram.png"
             alt="instagram"
-            width={32}
-            height={32}
-            className="object-contain"
+            className="rounded-full max-w-[30px] max-h-[24px] object-cover"
           /> 
         </button>
       </div>

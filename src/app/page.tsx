@@ -382,27 +382,27 @@ const HomePage = () => {
         <img
             src="/icons/mail.png"
             alt="email"
-            width={24}
-            height={20}
-            className="object-contain w-[24px] h-[24px]"
+            width={32}
+            height={32}
+            className="object-contain"
           /> 
         </button>
         <button className="bg-[#F9FFF6] p-4 rounded-full border border-gray-50 cursor-pointer">
         <img
             src="/icons/Phone.png"
             alt="phone"
-            width={24}
-            height={20}
-            className="object-contain w-[24px] h-[20px]"
+            width={32}
+            height={32}
+            className="object-contain"
           /> 
         </button>
         <button className="bg-[#F9FFF6] p-4 rounded-full border border-gray-50 cursor-pointer">
         <img
             src="/icons/instagram.png"
             alt="instagram"
-            width={24}
-            height={20}
-            className="object-contain w-[24px] h-[20px]"
+            width={32}
+            height={32}
+            className="object-contain"
           /> 
         </button>
       </div>

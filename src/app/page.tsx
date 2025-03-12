@@ -199,7 +199,7 @@ const HomePage = () => {
   >
     {/* Salad Image */}
     <img
-      src="/images/hero-salad.png"
+      src="/images/Hero-salad.png"
       alt="Green Salad Tomato"
       width={500}
       height={500}
@@ -389,7 +389,7 @@ const HomePage = () => {
         </button>
         <button className="bg-[#F9FFF6] p-4 rounded-full border border-gray-50 cursor-pointer">
         <img
-            src="/icons/phone.png"
+            src="/icons/Phone.png"
             alt="phone"
             width={24}
             height={20}
@@ -399,7 +399,7 @@ const HomePage = () => {
         <button className="bg-[#F9FFF6] p-4 rounded-full border border-gray-50 cursor-pointer">
         <img
             src="/icons/instagram.png"
-            alt="phone"
+            alt="instagram"
             width={24}
             height={24}
             className="object-contain"
@@ -458,7 +458,7 @@ const HomePage = () => {
       </div>
       <div className="flex gap-2 mt-2 items-center">
       <img
-            src="/icons/phone.png"
+            src="/icons/Phone.png"
             alt="phone"
             width={20}
             height={20}

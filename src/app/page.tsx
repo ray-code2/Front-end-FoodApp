@@ -384,7 +384,7 @@ const HomePage = () => {
             alt="email"
             width={24}
             height={20}
-            className="object-contain"
+            className="object-contain w-[24px] h-[24px]"
           /> 
         </button>
         <button className="bg-[#F9FFF6] p-4 rounded-full border border-gray-50 cursor-pointer">
@@ -393,7 +393,7 @@ const HomePage = () => {
             alt="phone"
             width={24}
             height={20}
-            className="object-contain"
+            className="object-contain w-[24px] h-[20px]"
           /> 
         </button>
         <button className="bg-[#F9FFF6] p-4 rounded-full border border-gray-50 cursor-pointer">
@@ -401,8 +401,8 @@ const HomePage = () => {
             src="/icons/instagram.png"
             alt="instagram"
             width={24}
-            height={24}
-            className="object-contain"
+            height={20}
+            className="object-contain w-[24px] h-[20px]"
           /> 
         </button>
       </div>
